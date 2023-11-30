@@ -23,7 +23,7 @@ class TiketController extends Controller
             't_timestamp'  => date('Y-m-d H:i:s'),
         ];
         $tiketModel->insert($data);
-        return $this->response->redirect(site_url('/ticket-form'));
+        return $this->response->redirect(site_url('/confirmation'));
     }
 
 }

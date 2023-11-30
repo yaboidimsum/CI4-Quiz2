@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Codeigniter 4 Add User With Validation Demo</title>
+  <title>Input New Film</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
 

@@ -78,10 +78,10 @@ class UserCrud extends Controller
         return view('confirmation', $data);
     }
 
-    public function myticket(){
-        $userModel = new UserModel();
-        $data['users'] = $userModel->orderBy('f_id', 'ASC   ')->findAll();
-        return view('myticket', $data);
-    }
+    // public function myticket(){
+    //     $userModel = new UserModel();
+    //     $data['users'] = $userModel->orderBy('f_id', 'ASC   ')->findAll();
+    //     return view('myticket', $data);
+    // }
 
 }

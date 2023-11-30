@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Codeigniter 4 CRUD - Edit User Demo</title>
+  <title>Edit Film</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .form-container {

@@ -1,0 +1,28 @@
+ERROR - 2023-11-30 13:01:17 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`db_quiz2`.`myticket`, CONSTRAINT `myticket_ibfk_1` FOREIGN KEY (`f_id`) REFERENCES `film` (`f_id`)) in C:\xampp\htdocs\voughtcinema5\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\voughtcinema5\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `fi...', 0)
+#1 C:\xampp\htdocs\voughtcinema5\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `fi...')
+#2 C:\xampp\htdocs\voughtcinema5\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `fi...')
+#3 C:\xampp\htdocs\voughtcinema5\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `fi...', Array, false)
+#4 C:\xampp\htdocs\voughtcinema5\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\voughtcinema5\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\voughtcinema5\app\Controllers\UserCrud.php(70): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\voughtcinema5\system\CodeIgniter.php(919): App\Controllers\UserCrud->delete('5')
+#8 C:\xampp\htdocs\voughtcinema5\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserCrud))
+#9 C:\xampp\htdocs\voughtcinema5\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\voughtcinema5\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\voughtcinema5\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-30 13:01:17 --> Cannot delete or update a parent row: a foreign key constraint fails (`db_quiz2`.`myticket`, CONSTRAINT `myticket_ibfk_1` FOREIGN KEY (`f_id`) REFERENCES `film` (`f_id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `film`
+WHERE `f_id` = :f_id:
+AND `f_id` IN :f_id.1:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\UserCrud.php(70): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserCrud->delete('5')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserCrud))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\voughtcinema5\\public\\index.php')
